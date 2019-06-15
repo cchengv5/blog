@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:cchengv5.github.io/blog/
-url: cchengv5.github.io/blog/
+url: 
 date_format: "ordinal"
 title: 随笔
 subtitle: ""
