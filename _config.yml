@@ -1,125 +1,87 @@
-# ---------------- #
-#   Main Configs   #
-# ---------------- #
-baseurl: /blog
-url: cchengv5.github.io/blog/
-date_format: "ordinal"
-title: 随笔
-subtitle: ""
-description: "程骢的个人博客"
-keywords: chengcong, cheng cong, 随笔
-timezone: Asia/Shanghai
-encoding: "utf-8"
-side_bar_repo_limit: 5
+# Site settings 配置站点
+title: 'CC的博客'
+description: '笔记'
+keyword: 'CC, 机器学习, 算法, 编程, 架构'
+url: 'cchengv5.github.io/blog/' # your host
 
-# ---------------- #
-#      Author      #
-# ---------------- #
-author: Cheng Cong
-organization: 
-organization_url: 
-github_username: cchengv5
-location: Nanjing, China
-email: chumpma@gmail.com
+# when build blog on server, if you don't need baseurl, you should leave this value blank.
+# 在服务器上建站时，如果你不需要子域名，请将这一格留空
+# if you're using GitHub Pages, set baseurl to your blog's .
+# 如果你在使用 GitHub Pages, 请将 baseurl 设置为你的网址的子域名
+# for example, if your site is "kaeyleo.github.io", then this url should leave blank.
+# 例如，当你的域名是 "kaeyleo.github.io"  时，这个 url 需要留空
+# but if your created a repo named "myblog", and the site is "kaeyleo.github.io/myblog", change baseurl to '/myblog'
+# 但是，如果你创建了一个叫 "myblog" 的网站，此时网址会变成 "kaeyleo.github.io/myblog" ，这时再将 baseurl 设置为 '/myblog'
+baseurl: '/blog'
 
-# ---------------- #
-#    Navigation    #
-# ---------------- #
-navs:
-  -
-    href: /
-    label: 首页
+# Navigation links
+nav:
+  home: '/'
+  tags: '/tags.html'
 
-  -
-    href: /categories/
-    label: 分类
+# Footer
+footer:
+  since: 2017
 
-#   -
-#     href: /archives/
-#     label: 归档
+# Author 配置博主信息
+author: 'CC'
+nickname: 'CC'
+bio: '简单乐观爱创造'
+avatar: '/assets/img/profile.png'
 
-  -
-    href: /wiki/
-    label: 维基
+# Search
+search: true
 
-  -
-    href: /links/
-    label: 链接
+# Night mode
+nightMode: true
 
-  -
-    href: /about/
-    label: 关于
+# Comments 评论功能
+comments:
+  disqus: false
+  disqus_url: 'https://liaokeyu.disqus.com/embed.js'
 
-# ---------------- #
-#       RSS        #
-# ---------------- #
-subscribe_rss: /feed.xml
+# MathJax 公式支持 by Ray-Eldath
+mathjax: true
 
-# ---------------- #
-#      Jekyll      #
-# ---------------- #
+# Share
+social-share: true
+social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
+
+# theme color 主题皮肤
+theme-color: 'default'  # pink or default
+
+# Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
+postPatterns: 'circuitBoard'
+
+# SNS settings 配置社交网站
+# url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
+sns:
+  weibo: ''
+  juejin: ''
+  instagram: ''
+  github: '//github.com/cchengv5/'
+
+# Tags 设置标签
+recommend-tags: true # whether or not display recommend-tags on the sidebar
+recommend-condition-size: 12 # a tag will be recommended if the size of it is more than this value
+
+# Build settings
+paginate: 6
+paginate_path: 'page:num'
+exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md']
+
+# Markdown
 markdown: kramdown
-kramdown:
-    input: GFM
 highlighter: rouge
-paginate: 10
-#lsi: false
-#quiet: false
-#excerpt_separator: "\n\n"
-#permalink: /:year/:month/:day/:title/
-#gems:
-#    - jekyll-github-metadata
-#    - rouge
-##     - jekyll-html-pipeline
-#    - jekyll-paginate
-#    - jekyll-sitemap
-#    - jekyll-feed
-#    - jemoji
-##     - jekyll-mentions
-#collections:
-#    wiki:
-#        output: true
-#        permalink: /wiki/:path/
-#
-#repository: mzlogin/mzlogin.github.io
-#
-## ---------------- #
-##      Comments    #
-## ---------------- #
-## support provider: disqus, gitment, gitalk
-#comments_provider: gitalk
-## !!!重要!!! 请修改下面这些信息为你自己申请的
-## !!!Important!!! Please modify infos below to yours
-## https://disqus.com
-#disqus:
-#    username: 
-## https://imsun.net/posts/gitment-introduction/
-#gitment:
-#    owner: mzlogin
-#    repo: blog-comments
-#    oauth:
-#        client_id: d2e1cbbd298958076462
-#        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
-## https://github.com/gitalk/gitalk#install
-#gitalk:
-#    owner: mzlogin
-#    repo: blog-comments
-#    clientID: d2e1cbbd298958076462
-#    clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
-## 在使用其它评论组件时可点击显示 Disqus
-#lazy_load_disqus : false
-#
-## ---------------- #
-##      Search      #
-## ---------------- #
-#simple_jekyll_search:
-#    # 是否支持全文搜索
-#    fulltext: false
-#    # 最多显示多少条搜索结果
-#    limit: 10
-#
-## ---------------- #
-##    Analytics     #
-## ---------------- #
-#google:
-#    analytics_id: UA-80669434-1
+kramdown:
+  input: GFM
+
+# RSS
+RSS: false
+
+# Permalink
+# See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35
+permalink: /:year/:month/:day/:title.html
+
+# Plugins
+plugins: [jekyll-paginate]
